@@ -6,7 +6,7 @@ Here I have compiled into one Jupyter notebook my implementations of a few stati
 
 #### Table of Contents
 
-1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network-:brain::medical_symbol:)
+1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network-🧠⚕️)
 2. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-:popcorn::dvd:)
 3. [Sentiment Analysis In Product Reviews](#Sentiment-Analysis-In-Product-Reviews)
 
