@@ -6,11 +6,11 @@ Here I have compiled into one Jupyter notebook my implementations of a few stati
 
 #### Table of Contents
 
-1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network)
-2. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies)
+1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network-:brain::medical_symbol:)
+2. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-:popcorn::dvd:)
 3. [Sentiment Analysis In Product Reviews](#Sentiment-Analysis-In-Product-Reviews)
 
-## Detecting Tumors With A Deep Convolutional Network
+## Detecting Tumors With A Deep Convolutional Network :brain::medical_symbol:
 
 ### Background
 
@@ -238,7 +238,7 @@ We observe a BER of 0.09, meaning our model is fairly accurate. While this resul
 ```python
 # Peak at first 15 scans from test set and predictions
 fig, axs = plt.subplots(3, 5, figsize=(16,10), dpi=200)
-fig.suptitle('First ten test scans & predictions', fontsize=24)
+fig.suptitle('First fifteen test scans & predictions', fontsize=24)
 
 for i in range(15):
     tumor = 'Tumor' if pred[i,0] > 0 else 'No Tumor'
