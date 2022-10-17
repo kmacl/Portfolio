@@ -7,10 +7,10 @@ Here I have compiled into one Jupyter notebook my implementations of a few stati
 #### Table of Contents
 
 1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network-🧠⚕️)
-2. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-:popcorn::dvd:)
+2. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-🍿📀)
 3. [Sentiment Analysis In Product Reviews](#Sentiment-Analysis-In-Product-Reviews)
 
-## Detecting Tumors With A Deep Convolutional Network :brain::medical_symbol:
+## Detecting Tumors With A Deep Convolutional Network 🧠⚕️
 
 ### Background
 
@@ -255,7 +255,7 @@ for i in range(15):
     
 
 
-## A Recommender System For Netflix Movies :popcorn::dvd:
+## A Recommender System For Netflix Movies 🍿📀
 
 ### Background
 In 2006, Netflix issued a challenge that was hard (for us plebeians) to ignore: any team that developed a recommender system for movies using data collected by the streaming service that could beat their in-house _Cinematch_ algorithm's error score by at least 10% would receive a $1 million prize. In spite of the competition having ended more than a decade ago, I have decided to put my skills to the test by developing a recommender system of my own using the same dataset.
