@@ -645,7 +645,7 @@ __Example Ratings__
 - _Battlestar Galactica: Season 1_ (#9863) - 5
 - _ECW: Guilty as Charged 2001 (#5380)_ - 1
 - _WWE: Summerslam 2003_ (#4141) - 1
-- _The Simpsons: Season 5_ (#5102) - 3
+- _The Simpsons: Season 5_ (#5102) - 2
 - _Gattaca (#17761)_ - 5
 
 
