@@ -9,8 +9,8 @@ Here I have compiled into one Jupyter notebook my implementations of a few stati
 1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network-brainmedical_symbol)
     1. [Results](#Testing-the-Model)
 2. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-popcorndvd)
-    1. [Implementation Details](#Implementation-Details)
-    2. [Results On Training Set](#Testing-the-Model)
+    1. [Implementation Details](#Implementation-Details-1)
+    2. [Results On Training Set](#Testing-the-Model-1)
     3. [Testing with a Sample User](#Adding-a-New-User)
     4. [Pragmatic Adjustments to the Model](#Pragmatic-Adjustments-to-the-Model)
 
