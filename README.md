@@ -1,7 +1,7 @@
 # Kyle MacLaughlin's Portfolio
 
 ### About Me
-I am an entry-level data scientist in San Diego, CA and anticipate receiving my bachelor's degree in Mathematics - Computer Science from UC San Diego this December. This means that <mark>I am actively seeking work starting in January of 2023</mark>. You can reach me at my email (kylemaclaughlin@gmail.com), by phone (614-800-5676), or [on LinkedIn](https://www.linkedin.com/in/kyle-maclaughlin/).
+I am an entry-level data scientist in San Diego, CA and anticipate receiving my bachelor's degree in Mathematics - Computer Science from UC San Diego this December. This means that ***I am actively seeking work starting in January of 2023***. You can reach me at my email (kylemaclaughlin@gmail.com), by phone (614-800-5676), or [on LinkedIn](https://www.linkedin.com/in/kyle-maclaughlin/).
 
 ### About This Portfolio
 In this portfolio notebook I aim to highlight some of my data analysis and machine learning skills by applying common methods to datasets from multiple domains. Along the way, I will include implementation details and my motivations for choosing them, but I have also included some data visualizations to make the process and results more intuitive.
