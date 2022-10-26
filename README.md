@@ -1,8 +1,10 @@
-# Kyle MacLaughlin's Resume Projects
+# Kyle MacLaughlin's Portfolio
 
-### Summary
+### About Me
+I am an entry-level data scientist in San Diego, CA and anticipate receiving my bachelor's degree in Mathematics - Computer Science from UC San Diego this December. This means that ==I am actively seeking work starting in January of 2023==. You can reach me at my email (kylemaclaughlin@gmail.com), by phone (614-800-5676), or [on LinkedIn](https://www.linkedin.com/in/kyle-maclaughlin/).
 
-Here I have compiled into one Jupyter notebook my implementations of a few statistical and machine learning tasks applying common methods to datasets from a variety of fields. Along the way, I include some implementation details and my motivations for choosing them, but I have also included some data visualizations to make the process and results more intuitive.
+### About This Portfolio
+In this portfolio notebook I aim to highlight some of my data analysis and machine learning skills by applying common methods to datasets from multiple domains. Along the way, I will include implementation details and my motivations for choosing them, but I have also included some data visualizations to make the process and results more intuitive.
 
 ### Table of Contents
 
@@ -754,7 +756,4 @@ for i in range(4):
 
 We see that as the emphasis shifts from generally popular items to items that align with the user's ratings, higher quality recommendations are made. In practice, it appears that the last weighting is best, as it includes items likely to appeal to the user's genre preferences while avoiding those that have received lower ratings. A better model would disproportionately weight a user's extremal preferences.
 
-
-```python
-
-```
+### More projects are in the works...
