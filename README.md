@@ -1,15 +1,16 @@
 # Kyle MacLaughlin's Portfolio
 
-### About Me
-I am an entry-level data scientist in San Diego, CA and just completed my bachelor's degree in Mathematics - Computer Science from UC San Diego, so I am actively seeking work. You can reach me at my email (kylemaclaughlin@gmail.com), by phone (614-800-5676), or [on LinkedIn](https://www.linkedin.com/in/kyle-maclaughlin/). I am willing to travel and/or relocate.
+## About Me
+I am a data scientist in San Diego, CA and just completed my bachelor's degree in Mathematics - Computer Science from UC San Diego, so I am actively seeking work. You can reach me at my email (kylemaclaughlin@gmail.com), by phone (614-800-5676), or [on LinkedIn](https://www.linkedin.com/in/kyle-maclaughlin/). I am willing to travel and/or relocate.
 
-### About This Portfolio
+## About This Portfolio
 I aim to highlight some of my data analysis and machine learning skills by applying common methods to datasets from multiple domains. Along the way, I will include implementation details and my motivations for choosing them, but I have also included some data visualizations to make the process and results more intuitive. You can find the notebooks in this repository, but I will also summarize my results here.
 
-### Table of Contents
+## Table of Contents
 
 1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network-brainmedical_symbol)
-2. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-popcorndvd)
+2. [Weather Prediction With A Hidden Markov Model](#Weather-Prediction-With-A-Hidden-Markov-Model-sunnyumbrella)
+3. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-popcorndvd)
 
 ## Detecting Tumors With A Deep Convolutional Network :brain::medical_symbol:
 
@@ -55,6 +56,36 @@ On one particular execution of the notebook, my model acheived an area under the
 <div align="center"><img src="figures/tumor-classifier-roc.png" width="80%"/></div><br/>
 <br/><div align="center"><img src="figures/15-scans.png" width="80%"/></div><br/>
 
+## Weather Prediction With A Hidden Markov Model :sunny::umbrella:
+
+### Background
+An issue of major concern in the domain of transportation and public safety is the occurrence of inclement weather, which is often important to know at least a day in advance. However, as is common knowledge, predicting the weather is not easy, especially in some areas where the weather is relatively volatile. Therefore, I decided to make models that could predict the sometimes wildly unpredictable weather in my hometown of Columbus, Ohio simply by examining real-world weather data from the previous few days.
+
+Predicting the weather has always proven elusive, lying somewhere between the often preferred domains of pure chance and an easily foreseen chain of events. Such processes are common in our world, and statisticians have accordingly devised models to assist in the description of such semi-random processes. One such model is the hidden Markov model (HMM), which has applications in such varied domains as speech recognition, biology and finance, so I decided to implement it in order to predict weather patterns in Columbus.
+
+### Exploration of the Dataset
+Before building models, I cleaned up the data and created visualizations of them to view trends in the dataset.
+
+<div align="center"><img src="figures/weather-summary.png" width="60%"/></div>
+
+### Implementation Details
+An HMM of a temporal process (in this case, the weather) makes two key modeling assumptions:
+
+ - The probability of any *observable* outcome (e.g. a rainy day) is exclusively dependent on a *hidden* (unobservable) state of the system (e.g. the movement of every molecule in the sky)
+
+- The current hidden state of the process *only depends on its recent past* (e.g. yesterday's weather)
+
+It made sense to use such a model since the weather has a hidden state (the motion of every wind & water current on Earth) that can be approximated and a series of well-defined outcomes (temperatures, winds, precipitation, etc.) that exclusively depend on that hidden state. Weather data were gathered from the [National Centers for Environmental Information's Climate Data Online](https://www.ncdc.noaa.gov/cdo-web/) for Jan. 1, 2012 to Dec. 27, 2022, with units given in the imperial system (US standard). I trained models on the data from 2012 - 2020 and tested them on the data from 2021 - 2022.
+
+### Results
+I derived an [expectation-maximization algorithm](https://en.wikipedia.org/wiki/Expectation–maximization_algorithm) for use with my models, and I trained both an ensemble of smaller models and a single larger model to see which would fare better. After the parameters were learned, I compared the prediction errors of the ensemble and the lone HMM on test data, feeding in 1-14 days of previous weather data per prediction. As we might expect, the error increases as we attempt to predict the weather for longer timespans.
+
+<div align="center"><img src="figures/ensemble-vs-hmm.png" width="80%"/></div>
+
+Finally, I randomly selected three random date ranges and had each model generate ten 3-day forecasts for each provided weather history. In the graphs below, the predicted values to the left of the actual quantities represent the ensemble's predictions while those to the right constitute the large HMM's predictions.
+
+<div align="center"><img src="figures/sample-forecasts.png" width="80%"/></div><br/>
+
 ## A Recommender System For Netflix Movies :popcorn::dvd:
 
 ### Background
@@ -88,7 +119,7 @@ In the end, I examined the significance of the learned parameters in the output 
 
 I then performed principal component analysis (PCA) to reduce the dimensionality of the alignment vectors to a plane so they could be visualized as follows:
 
-<div align="center"><img src="figures/pca-all.png" width="80%"/></div>
+<div align="center"><img src="figures/pca-all.png" width="60%"/></div>
 
 Two key insights can be taken from these data. The first is that the movie alignment vectors seem to remain roughly normally distributed, while the user alignment vectors are indeed clustered. This suggests that the movies have largely defined the dimensions of the alignment space, not the users. The second is that the movie alignments are close to the origin, while the user alignments are more spread out. We can infer that the model has learned that some users' preferences are not particularly strong, while others are extremely opinionated, and that it is usually best to let the user parameters determine the alignment score's magnitude.
 
