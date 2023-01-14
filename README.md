@@ -50,13 +50,16 @@ In order to create the model, I downloaded the _Br35H :: Brain Tumor Detection 2
     _________________________________________________________________
 
 
+<img src="figures/tumor-classifier-roc.png" width="60%" align="left"/>
+
 ### Results
 On one particular execution of the notebook, my model acheived an area under the ROC curve (AUC-ROC) of 0.941, and typical executions had an AUC > 0.95. This means that for most classification thresholds, the true positive rate was far greater than the false positive rate. For the application of flagging cases for review by radiologists, it might be best to have a relatively low classification threshold (at the risk of including more false positives). Here are the ROC curve and the first fifteen scans in the shuffled dataset, along with the classifier's predictions under the optimal threshold.
 
-<div align="center"><img src="figures/tumor-classifier-roc.png" width="80%"/></div><br/>
-<br/><div align="center"><img src="figures/15-scans.png" width="80%"/></div><br/>
+<br/><div align="center"><img src="figures/15-scans.png"/></div><br/>
 
 ## Weather Prediction With A Hidden Markov Model :sunny::umbrella:
+
+<img src="figures/weather-summary.png" width="50%" align="right"/>
 
 ### Background
 An issue of major concern in the domain of transportation and public safety is the occurrence of inclement weather, which is often important to know at least a day in advance. However, as is common knowledge, predicting the weather is not easy, especially in some areas where the weather is relatively volatile. Therefore, I decided to make models that could predict the sometimes wildly unpredictable weather in my hometown of Columbus, Ohio simply by examining real-world weather data from the previous few days.
@@ -64,9 +67,7 @@ An issue of major concern in the domain of transportation and public safety is t
 Predicting the weather has always proven elusive, lying somewhere between the often preferred domains of pure chance and an easily foreseen chain of events. Such processes are common in our world, and statisticians have accordingly devised models to assist in the description of such semi-random processes. One such model is the hidden Markov model (HMM), which has applications in such varied domains as speech recognition, biology and finance, so I decided to implement it in order to predict weather patterns in Columbus.
 
 ### Exploration of the Dataset
-Before building models, I cleaned up the data and created visualizations of them to view trends in the dataset.
-
-<div align="center"><img src="figures/weather-summary.png" width="60%"/></div>
+Before building models, I cleaned up the data and created visualizations of them to view trends in the dataset, several of which can be seen to the right.
 
 ### Implementation Details
 An HMM of a temporal process (in this case, the weather) makes two key modeling assumptions:
@@ -77,14 +78,18 @@ An HMM of a temporal process (in this case, the weather) makes two key modeling 
 
 It made sense to use such a model since the weather has a hidden state (the motion of every wind & water current on Earth) that can be approximated and a series of well-defined outcomes (temperatures, winds, precipitation, etc.) that exclusively depend on that hidden state. Weather data were gathered from the [National Centers for Environmental Information's Climate Data Online](https://www.ncdc.noaa.gov/cdo-web/) for Jan. 1, 2012 to Dec. 27, 2022, with units given in the imperial system (US standard). I trained models on the data from 2012 - 2020 and tested them on the data from 2021 - 2022.
 
+<div>
+
+<img src="figures/ensemble-vs-hmm.png" width="60%" align="left"/>
+
 ### Results
 I derived an [expectation-maximization algorithm](https://en.wikipedia.org/wiki/Expectation–maximization_algorithm) for use with my models, and I trained both an ensemble of smaller models and a single larger model to see which would fare better. After the parameters were learned, I compared the prediction errors of the ensemble and the lone HMM on test data, feeding in 1-14 days of previous weather data per prediction. As we might expect, the error increases as we attempt to predict the weather for longer timespans.
 
-<div align="center"><img src="figures/ensemble-vs-hmm.png" width="80%"/></div>
+</div></br>
 
 Finally, I randomly selected three random date ranges and had each model generate ten 3-day forecasts for each provided weather history. In the graphs below, the predicted values to the left of the actual quantities represent the ensemble's predictions while those to the right constitute the large HMM's predictions.
 
-<div align="center"><img src="figures/sample-forecasts.png" width="80%"/></div><br/>
+<div align="center"><img src="figures/sample-forecasts.png"/></div><br/>
 
 ## A Recommender System For Netflix Movies :popcorn::dvd:
 
@@ -117,9 +122,9 @@ In the end, I examined the significance of the learned parameters in the output 
     The Rise and Fall of ECW
     Clifford: Clifford Saves the Day! / Clifford's Fluffiest Friend Cleo
 
-I then performed principal component analysis (PCA) to reduce the dimensionality of the alignment vectors to a plane so they could be visualized as follows:
+<img src="figures/pca-all.png" width="60%" align="right"/>
 
-<div align="center"><img src="figures/pca-all.png" width="60%"/></div>
+I then performed principal component analysis (PCA) to reduce the dimensionality of the alignment vectors to a plane so they could be visualized.
 
 Two key insights can be taken from these data. The first is that the movie alignment vectors seem to remain roughly normally distributed, while the user alignment vectors are indeed clustered. This suggests that the movies have largely defined the dimensions of the alignment space, not the users. The second is that the movie alignments are close to the origin, while the user alignments are more spread out. We can infer that the model has learned that some users' preferences are not particularly strong, while others are extremely opinionated, and that it is usually best to let the user parameters determine the alignment score's magnitude.
 
