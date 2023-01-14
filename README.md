@@ -85,7 +85,7 @@ It made sense to use such a model since the weather has a hidden state (the moti
 ### Results
 I derived an [expectation-maximization algorithm](https://en.wikipedia.org/wiki/Expectation–maximization_algorithm) for use with my models, and I trained both an ensemble of smaller models and a single larger model to see which would fare better. After the parameters were learned, I compared the prediction errors of the ensemble and the lone HMM on test data, feeding in 1-14 days of previous weather data per prediction. As we might expect, the error increases as we attempt to predict the weather for longer timespans.
 
-</div></br>
+</div></br></br>
 
 Finally, I randomly selected three random date ranges and had each model generate ten 3-day forecasts for each provided weather history. In the graphs below, the predicted values to the left of the actual quantities represent the ensemble's predictions while those to the right constitute the large HMM's predictions.
 
