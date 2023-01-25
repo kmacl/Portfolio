@@ -11,6 +11,7 @@ I aim to highlight some of my data analysis and machine learning skills by apply
 1. [Detecting Tumors With A Deep Convolutional Network](#Detecting-Tumors-With-A-Deep-Convolutional-Network-brainmedical_symbol)
 2. [Weather Prediction With A Hidden Markov Model](#Weather-Prediction-With-A-Hidden-Markov-Model-sunnyumbrella)
 3. [A Recommender System For Netflix Movies](#A-Recommender-System-For-Netflix-Movies-popcorndvd)
+4. Perceptual Loss Functions For NLP (In Progress)
 
 ## Detecting Tumors With A Deep Convolutional Network :brain::medical_symbol:
 
