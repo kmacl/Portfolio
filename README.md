@@ -1,7 +1,7 @@
 # Kyle MacLaughlin's Portfolio
 
 ## About Me
-I am a data scientist with a recently completed bachelor's degree in Mathematics - Computer Science from UC San Diego, and I am actively seeking work. You can reach me at my email (kylemaclaughlin@gmail.com), by phone (614-800-5676), or [on LinkedIn](https://www.linkedin.com/in/kyle-maclaughlin/). I am willing to travel and/or relocate.
+I am a software developer at Epic Systems Corporation with a recently completed bachelor's degree in Mathematics - Computer Science from UC San Diego. In my current position, I write mobile, web front-end, server, and database code. I maintain a passion for data science, mathematics, linguistics, and artificial intelligence. You can reach me at my email (kylemaclaughlin@gmail.com), by phone (614-800-5676), or [on LinkedIn](https://www.linkedin.com/in/kyle-maclaughlin/).
 
 ## About This Portfolio
 I aim to highlight some of my data analysis and machine learning skills by applying common methods to datasets from multiple domains. Along the way, I will include implementation details and my motivations for choosing them, but I have also included some data visualizations to make the process and results more intuitive. You can find the Jupyter notebooks in this repository, but I will also summarize my results here.
